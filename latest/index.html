@@ -278,6 +278,20 @@
     background: #fff7ed;
     color: #c2410c;
   }
+
+  /* ── Mobile ── */
+  @media (max-width: 640px) {
+    .container { padding: 20px 16px; }
+    .header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .summary-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .summary-card .value { font-size: 24px; }
+    .summary-card .label { font-size: 11px; }
+    .health-grid { grid-template-columns: 1fr; }
+    .health-item .value { font-size: 12px; }
+    table { font-size: 12px; }
+    th, td { padding: 6px 8px; }
+    h1 { font-size: 22px; }
+  }
 </style>
 </head>
 <body>
@@ -338,56 +352,77 @@
   <div class="section">
     <div class="section-title">일별 도달 추이</div>
     <div class="bar-chart">
-      
-      <div class="bar-group">
-        <div class="bar-value">4,105</div>
-        <div class="bar sec30 max" style="height:140px"></div>
-        <div class="bar-value">13</div>
-        <div class="bar rexa max" style="height:2px"></div>
-        <div class="bar-label">03-30<br>월</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-value">2,719</div>
-        <div class="bar sec30" style="height:92px"></div>
-        <div class="bar-value">10</div>
-        <div class="bar rexa" style="height:2px"></div>
-        <div class="bar-label">03-31<br>화</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-value">2,181</div>
-        <div class="bar sec30" style="height:74px"></div>
-        <div class="bar-value">13</div>
-        <div class="bar rexa max" style="height:2px"></div>
-        <div class="bar-label">04-01<br>수</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-value">1,744</div>
-        <div class="bar sec30" style="height:59px"></div>
-        <div class="bar-value">8</div>
-        <div class="bar rexa" style="height:2px"></div>
-        <div class="bar-label">04-02<br>목</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-value">840</div>
-        <div class="bar sec30" style="height:28px"></div>
-        <div class="bar-value">6</div>
-        <div class="bar rexa" style="height:2px"></div>
-        <div class="bar-label">04-03<br>금</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-value">264</div>
-        <div class="bar sec30" style="height:9px"></div>
-        <div class="bar-value">1</div>
-        <div class="bar rexa" style="height:2px"></div>
-        <div class="bar-label">04-04<br>토</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-value">293</div>
-        <div class="bar sec30" style="height:9px"></div>
-        <div class="bar-value">4</div>
-        <div class="bar rexa" style="height:2px"></div>
-        <div class="bar-label">04-05<br>일</div>
-      </div>
+      <div style="font-size:12px;font-weight:600;color:#3b82f6;margin-bottom:6px">30초부동산</div><div class="bar-chart" style="height:120px">
+          <div class="bar-group">
+            <div class="bar-value">4,105</div>
+            <div class="bar sec30 max" style="height:100px"></div>
+            <div class="bar-label">03-30<br>월</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">2,719</div>
+            <div class="bar sec30" style="height:66px"></div>
+            <div class="bar-label">03-31<br>화</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">2,181</div>
+            <div class="bar sec30" style="height:53px"></div>
+            <div class="bar-label">04-01<br>수</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">1,744</div>
+            <div class="bar sec30" style="height:42px"></div>
+            <div class="bar-label">04-02<br>목</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">840</div>
+            <div class="bar sec30" style="height:20px"></div>
+            <div class="bar-label">04-03<br>금</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">264</div>
+            <div class="bar sec30" style="height:6px"></div>
+            <div class="bar-label">04-04<br>토</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">293</div>
+            <div class="bar sec30" style="height:7px"></div>
+            <div class="bar-label">04-05<br>일</div>
+          </div></div><div style="font-size:12px;font-weight:600;color:#f97316;margin-bottom:6px;margin-top:16px">REXA</div><div class="bar-chart" style="height:120px">
+          <div class="bar-group">
+            <div class="bar-value">13</div>
+            <div class="bar rexa max" style="height:100px"></div>
+            <div class="bar-label">03-30<br>월</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">10</div>
+            <div class="bar rexa" style="height:76px"></div>
+            <div class="bar-label">03-31<br>화</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">13</div>
+            <div class="bar rexa max" style="height:100px"></div>
+            <div class="bar-label">04-01<br>수</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">8</div>
+            <div class="bar rexa" style="height:61px"></div>
+            <div class="bar-label">04-02<br>목</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">6</div>
+            <div class="bar rexa" style="height:46px"></div>
+            <div class="bar-label">04-03<br>금</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">1</div>
+            <div class="bar rexa" style="height:7px"></div>
+            <div class="bar-label">04-04<br>토</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">4</div>
+            <div class="bar rexa" style="height:30px"></div>
+            <div class="bar-label">04-05<br>일</div>
+          </div></div>
     </div>
     <div class="chart-legend">
       <div class="legend-item"><div class="legend-dot rexa"></div> REXA</div>
@@ -430,12 +465,18 @@
         <tr><th class="center">순위</th><th>게시일</th><th class="right">도달</th><th class="right">참여율</th><th>반응</th><th>링크</th></tr>
         <tr><td class="center">1</td><td>2026-03-31</td><td class="right">2704명</td><td class="right">0.33%</td><td>좋아요 6 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWiQlhhEcZO/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
         <tr><td class="center">2</td><td>2026-04-02</td><td class="right">2273명</td><td class="right">0.22%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWnAaftkk3W/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
-        <tr><td class="center">3</td><td>2026-03-30</td><td class="right">2036명</td><td class="right">0.93%</td><td>좋아요 5 / 저장 2</td><td><a href="https://www.instagram.com/reel/DWfe6C7Eq-U/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div>
+        <tr><td class="center">3</td><td>2026-03-30</td><td class="right">2037명</td><td class="right">0.93%</td><td>좋아요 5 / 저장 2</td><td><a href="https://www.instagram.com/reel/DWfe6C7Eq-U/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div>
 
   <!-- DM Section -->
   <div class="section">
     <div class="section-title">DM (리드 후보)</div>
-
+    
+    <div style="padding:8px 12px;background:#eff6ff;
+         border-left:3px solid #3b82f6;border-radius:0 6px 6px 0;
+         margin-bottom:6px;font-size:13px">
+      <strong>@30sec.budongsan</strong> → @30sec
+      <span style="color:#64748b;margin-left:8px">아 네 네 감사합니다^^</span>
+    </div>
     <table class="cumulative-table">
       <tr>
         <th>기간</th>
@@ -468,37 +509,14 @@
     <div class="section-title">건강 지표</div>
     <div class="health-grid">
       
-      <div class="health-item">
+      <div class="health-item" style="justify-content:center;text-align:center;padding:24px">
         <div>
-          <div class="label">@rexa_official_kr</div>
-          <div class="value">WAU 비율: 0.0% (목표: ≥7%)</div>
-          <div class="desc">주간 참여 계정 수 / 전체 팔로워</div>
+          <div class="value" style="color:#94a3b8;font-size:14px">측정 준비 중</div>
+          <div class="desc" style="margin-top:8px">
+            WAU, 전환율 등 건강 지표는 카카오톡 챗봇 런칭(6월) 이후 본격 측정합니다.<br>
+            현재는 도달, 참여율, DM 건수를 기준으로 성장을 추적합니다.
+          </div>
         </div>
-        <div class="health-status status-fail">주의</div>
-      </div>
-      <div class="health-item">
-        <div>
-          <div class="label">@rexa_official_kr</div>
-          <div class="value">도달→프로필 전환율: 0.00% (목표: ≥1%)</div>
-          <div class="desc">프로필 방문 수 / 도달 수</div>
-        </div>
-        <div class="health-status status-fail">주의</div>
-      </div>
-      <div class="health-item">
-        <div>
-          <div class="label">@30sec.budongsan</div>
-          <div class="value">WAU 비율: 0.0% (목표: ≥7%)</div>
-          <div class="desc">주간 참여 계정 수 / 전체 팔로워</div>
-        </div>
-        <div class="health-status status-fail">주의</div>
-      </div>
-      <div class="health-item">
-        <div>
-          <div class="label">@30sec.budongsan</div>
-          <div class="value">도달→프로필 전환율: 0.00% (목표: ≥1%)</div>
-          <div class="desc">프로필 방문 수 / 도달 수</div>
-        </div>
-        <div class="health-status status-fail">주의</div>
       </div>
     </div>
   </div>
@@ -507,13 +525,9 @@
   <div class="section">
     <div class="section-title">추천 액션</div>
     <ul class="rec-list">
-      <li>@rexa_official_kr WAU 비율 0.0% (목표: ≥7%) → 점검 필요</li>
-<li>@rexa_official_kr 도달→프로필 전환율 0.00% (목표: ≥1%) → 점검 필요</li>
-<li>@30sec.budongsan 도달(12,146) 대비 팔로워(65)가 적음 → 프로필/바이오 최적화 또는 CTA 강화 필요</li>
-<li>@30sec.budongsan 평균 참여율 1.16% → 저장/공유 유도 CTA, 캡션 질문형 전환 검토</li>
-<li>@30sec.budongsan WAU 비율 0.0% (목표: ≥7%) → 점검 필요</li>
-<li>@30sec.budongsan 도달→프로필 전환율 0.00% (목표: ≥1%) → 점검 필요</li>
-
+      <li>@30sec.budongsan 프로필 바이오에 핵심 가치제안 추가 — 도달 12,146명 대비 팔로워 65명 (전환율 0.54%)</li>
+<li>@30sec.budongsan 콘텐츠 CTA 강화 — 캡션에 질문 추가, 저장/공유 유도 문구 삽입 (현재 참여율 1.16%)</li>
+<li>@30sec.budongsan 상위 릴스 패턴 반복 — 주간 도달 12,146명, 최고 성과 콘텐츠의 주제/길이/시간대 분석 후 재활용</li>
     </ul>
   </div>
 

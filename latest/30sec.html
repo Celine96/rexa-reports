@@ -219,6 +219,17 @@
     color: #0f172a;
   }
 
+  @media (max-width: 640px) {
+    .container { padding: 20px 16px; }
+    .header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .summary-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .summary-card .value { font-size: 24px; }
+    .health-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+    th, td { padding: 6px 8px; }
+    h1 { font-size: 22px; }
+  }
+
   .footer {
     text-align: center;
     padding: 24px 0;
@@ -315,10 +326,17 @@
         <tr><th class="center">순위</th><th>게시일</th><th class="right">도달</th><th class="right">참여율</th><th>반응</th><th>링크</th></tr>
         <tr><td class="center">1</td><td>2026-03-31</td><td class="right">2704명</td><td class="right">0.33%</td><td>좋아요 6 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWiQlhhEcZO/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
         <tr><td class="center">2</td><td>2026-04-02</td><td class="right">2273명</td><td class="right">0.22%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWnAaftkk3W/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
-        <tr><td class="center">3</td><td>2026-03-30</td><td class="right">2036명</td><td class="right">0.93%</td><td>좋아요 5 / 저장 2</td><td><a href="https://www.instagram.com/reel/DWfe6C7Eq-U/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div>
+        <tr><td class="center">3</td><td>2026-03-30</td><td class="right">2037명</td><td class="right">0.93%</td><td>좋아요 5 / 저장 2</td><td><a href="https://www.instagram.com/reel/DWfe6C7Eq-U/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div>
 
   <div class="section">
     <div class="section-title">DM (리드 후보)</div>
+    <div style="margin-bottom:16px">
+    <div style="padding:8px 12px;background:#eff6ff;
+         border-left:3px solid #3b82f6;border-radius:0 6px 6px 0;
+         margin-bottom:6px;font-size:13px">
+      <strong>@30sec.budongsan</strong>
+      <span style="color:#64748b;margin-left:8px">아 네 네 감사합니다^^</span>
+    </div></div>
     <table class="cumulative-table">
       <tr><th>기간</th><th class="right">수신 DM</th><th class="right">고유 발신자</th></tr>
       <tr><td>2026-03-30~2026-04-05</td><td class="right">11건</td><td class="right">1명</td></tr>
@@ -332,24 +350,19 @@
     <div class="section-title">건강 지표</div>
     <div class="health-grid">
       
-      <div class="health-item">
+      <div class="health-item" style="justify-content:center;text-align:center;padding:24px">
         <div>
-          <div class="value">WAU 비율: 0.0% (목표: ≥7%)</div>
-          <div class="desc">주간 참여 계정 수 / 전체 팔로워</div>
+          <div class="value" style="color:#94a3b8;font-size:14px">측정 준비 중</div>
+          <div class="desc" style="margin-top:8px">
+            WAU, 전환율 등 건강 지표는 카카오톡 챗봇 런칭(6월) 이후 본격 측정합니다.<br>
+            현재는 도달, 참여율, DM 건수를 기준으로 성장을 추적합니다.
+          </div>
         </div>
-        <div class="health-status status-fail">주의</div>
-      </div>
-      <div class="health-item">
-        <div>
-          <div class="value">도달→프로필 전환율: 0.00% (목표: ≥1%)</div>
-          <div class="desc">프로필 방문 수 / 도달 수</div>
-        </div>
-        <div class="health-status status-fail">주의</div>
       </div>
     </div>
   </div>
 
-  <div class="section"><div class="section-title">추천 액션</div><ul class="rec-list"><li>@30sec.budongsan 도달(12,146) 대비 팔로워(65)가 적음 → 프로필/바이오 최적화 또는 CTA 강화 필요</li><li>@30sec.budongsan 평균 참여율 1.16% → 저장/공유 유도 CTA, 캡션 질문형 전환 검토</li><li>@30sec.budongsan WAU 비율 0.0% (목표: ≥7%) → 점검 필요</li><li>@30sec.budongsan 도달→프로필 전환율 0.00% (목표: ≥1%) → 점검 필요</li></ul></div>
+  <div class="section"><div class="section-title">추천 액션</div><ul class="rec-list"><li>@30sec.budongsan 도달(12,146) 대비 팔로워(65)가 적음 → 프로필/바이오 최적화 또는 CTA 강화 필요</li><li>@30sec.budongsan 평균 참여율 1.16% → 저장/공유 유도 CTA, 캡션 질문형 전환 검토</li></ul></div>
 
   <div class="footer">
     Kai (Growth Analyst) | IG Insights API | python -m marketing_agent.main --growth

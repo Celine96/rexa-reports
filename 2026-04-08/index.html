@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REXA 주간 성장 리포트 — 2026-04-08</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" crossorigin="anonymous">
 <style>
-  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -67,7 +67,7 @@
   .summary-card .label {
     font-size: 12px;
     font-weight: 600;
-    color: #94a3b8;
+    color: #64748b;
     letter-spacing: 0.5px;
   }
   .summary-card .value {
@@ -82,7 +82,7 @@
   }
   .summary-card .desc {
     font-size: 11px;
-    color: #94a3b8;
+    color: #64748b;
     margin-top: 4px;
   }
   .summary-card .detail .rexa { color: #f97316; font-weight: 600; }
@@ -150,27 +150,10 @@
   }
   .bar-label {
     font-size: 11px;
-    color: #94a3b8;
+    color: #64748b;
     text-align: center;
     margin-top: 6px;
   }
-
-  /* ── Chart Legend ── */
-  .chart-legend {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 12px;
-    font-size: 12px;
-    color: #64748b;
-  }
-  .legend-item { display: flex; align-items: center; gap: 4px; }
-  .legend-dot {
-    width: 10px; height: 10px;
-    border-radius: 2px;
-  }
-  .legend-dot.rexa { background: #f97316; }
-  .legend-dot.sec30 { background: #3b82f6; }
 
   /* ── Table ── */
   table {
@@ -204,43 +187,12 @@
     padding: 16px;
     margin-bottom: 12px;
   }
-  .dm-card .dm-header {
-    font-weight: 700;
-    font-size: 14px;
-    color: #c2410c;
-    margin-bottom: 8px;
-  }
-  .dm-message {
-    font-size: 13px;
-    color: #0f172a;
-    padding: 4px 0;
-    border-bottom: 1px dashed #fed7aa;
-  }
-  .dm-message:last-child { border-bottom: none; }
-  .dm-time { color: #f97316; font-size: 12px; }
   .dm-empty {
-    color: #94a3b8;
+    color: #64748b;
     font-style: italic;
     font-size: 14px;
   }
 
-  /* ── Health ── */
-  .health-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 12px;
-  }
-  .health-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    background: #f8fafc;
-    border-radius: 8px;
-  }
-  .health-item .label { font-size: 13px; color: #475569; }
-  .health-item .desc { font-size: 11px; color: #94a3b8; margin-top: 2px; }
-  .health-item .value { font-size: 14px; font-weight: 700; }
   .health-status {
     font-size: 12px;
     font-weight: 600;
@@ -267,7 +219,7 @@
     text-align: center;
     padding: 24px 0;
     font-size: 12px;
-    color: #94a3b8;
+    color: #64748b;
   }
 
   /* ── Cumulative Table ── */
@@ -287,8 +239,6 @@
     .section [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
     .summary-card .value { font-size: 24px; }
     .summary-card .label { font-size: 11px; }
-    .health-grid { grid-template-columns: 1fr; }
-    .health-item .value { font-size: 12px; }
     table { font-size: 12px; }
     th, td { padding: 6px 8px; }
     h1 { font-size: 22px; }
@@ -296,7 +246,7 @@
 </style>
 </head>
 <body>
-<div class="container">
+<main class="container" role="main">
 
   <!-- Header -->
   <div class="header">
@@ -314,7 +264,7 @@
     <div>
       <div style="font-size:11px;color:#94a3b8;font-weight:600;letter-spacing:0.5px">NORTH STAR — 월간 유효 상담</div>
       <div style="font-size:36px;font-weight:800;color:white;margin:4px 0">1명</div>
-      <div style="font-size:12px;color:#64748b">HOT 리드 1명 / 전체 DM 2건</div>
+      <div style="font-size:12px;color:#64748b">HOT 리드 1명 / 누적 DM 15건</div>
     </div>
     <div style="text-align:right">
       <div style="font-size:11px;color:#94a3b8">목표: 월 2건 (0~3개월)</div>
@@ -325,7 +275,7 @@
   <div class="summary-grid">
     <div class="summary-card" style="border-left:none">
       <div class="label">팔로워</div>
-      <div class="value">103</div>
+      <div class="value">103 <span style="font-size:11px;color:#16a34a">+8명</span></div>
       <div class="detail">
         <span class="rexa">REXA 28</span> /
         <span class="sec30">30초 75</span>
@@ -334,7 +284,7 @@
     </div>
     <div class="summary-card" style="border-left:none">
       <div class="label">주간 도달</div>
-      <div class="value">7,820</div>
+      <div class="value">7,820 <span style="font-size:11px;color:#dc2626">-1,537</span></div>
       <div class="detail">
         <span class="rexa">REXA 49</span> /
         <span class="sec30">30초 7,771</span>
@@ -343,10 +293,10 @@
     </div>
     <div class="summary-card" style="border-left:none">
       <div class="label">참여율</div>
-      <div class="value">6.5%</div>
+      <div class="value">6.5% <span style="font-size:11px;color:#16a34a">+0.5%p</span></div>
       <div class="detail">
-        <span class="rexa">REXA 11.39%</span> /
-        <span class="sec30">30초 1.61%</span>
+        <span class="rexa">REXA 11.4%</span> /
+        <span class="sec30">30초 1.6%</span>
       </div>
       <div class="desc">(좋아요+댓글+저장+공유) / 도달</div>
     </div>
@@ -402,7 +352,7 @@
         <div class="bar sec30" style="height:54px"></div>
         <div class="bar-label">04-07<br>화</div>
       </div></div>
-        <div style="font-size:12px;font-weight:600;color:#3b82f6;text-align:center;margin-top:8px">30초부동산</div>
+        <div style="font-size:12px;font-weight:600;color:#3b82f6;text-align:center;margin-top:8px">30초부동산 <span style="font-weight:400;color:#94a3b8">(최대 2,181)</span></div>
       </div>
       <div>
         <div class="bar-chart" style="height:180px;padding-top:32px">
@@ -441,7 +391,7 @@
         <div class="bar rexa" style="height:69px"></div>
         <div class="bar-label">04-07<br>화</div>
       </div></div>
-        <div style="font-size:12px;font-weight:600;color:#f97316;text-align:center;margin-top:8px">REXA</div>
+        <div style="font-size:12px;font-weight:600;color:#f97316;text-align:center;margin-top:8px">REXA <span style="font-weight:400;color:#94a3b8">(최대 13)</span></div>
       </div>
     </div>
   </div>
@@ -457,16 +407,16 @@
         <tr><td>팔로워</td><td class="right"><strong>28명</strong></td></tr>
         <tr><td>주간 도달</td><td class="right"><strong>49명</strong></td></tr>
         <tr><td>게시물</td><td class="right">28개</td></tr>
-        <tr><td>참여율</td><td class="right">11.39%</td></tr>
-        <tr><td>평균 도달 (캐러셀)</td><td class="right">17명 / 최대 57명</td></tr></table><div class="section-title" style="margin-top:20px">이번 주 상위 게시물</div><table>
+        <tr><td>참여율</td><td class="right">11.4%</td></tr>
+        <tr><td>평균 도달 (캐러셀)</td><td class="right">17명 / 최대 57명</td></tr></table><div class="section-title" style="margin-top:20px">이번 주 상위 게시물</div><div style="overflow-x:auto"><table>
         <tr><th class="center">순위</th><th>게시일</th><th class="right">도달</th><th class="right">참여율</th><th>반응</th><th>링크</th></tr>
-        <tr><td class="center">1</td><td>2026-04-01</td><td class="right">13명</td><td class="right">7.69%</td><td>좋아요 1 / 저장 0</td><td><a href="https://www.instagram.com/p/DWk52O3j6mN/" target="_blank" style="color:#f97316">보기</a></td></tr>
+        <tr><td class="center">1</td><td>2026-04-01</td><td class="right">13명</td><td class="right">7.7%</td><td>좋아요 1 / 저장 0</td><td><a href="https://www.instagram.com/p/DWk52O3j6mN/" target="_blank" style="color:#f97316">보기</a></td></tr>
         <tr><td class="center">2</td><td>2026-04-02</td><td class="right">10명</td><td class="right">0.0%</td><td>좋아요 0 / 저장 0</td><td><a href="https://www.instagram.com/p/DWm9Js6kmGo/" target="_blank" style="color:#f97316">보기</a></td></tr>
-        <tr><td class="center">3</td><td>2026-04-01</td><td class="right">10명</td><td class="right">10.0%</td><td>좋아요 1 / 저장 0</td><td><a href="https://www.instagram.com/p/DWk5zigD3Pq/" target="_blank" style="color:#f97316">보기</a></td></tr></table><div class="section-title" style="margin-top:20px">전체 상위 게시물 (최근 50개)</div><table>
+        <tr><td class="center">3</td><td>2026-04-01</td><td class="right">10명</td><td class="right">10.0%</td><td>좋아요 1 / 저장 0</td><td><a href="https://www.instagram.com/p/DWk5zigD3Pq/" target="_blank" style="color:#f97316">보기</a></td></tr></table></div><div class="section-title" style="margin-top:20px">전체 상위 게시물 (최근 50개)</div><div style="overflow-x:auto"><table>
         <tr><th class="center">순위</th><th>게시일</th><th class="right">도달</th><th class="right">참여율</th><th>반응</th><th>링크</th></tr>
-        <tr><td class="center">1</td><td>2026-03-19</td><td class="right">57명</td><td class="right">14.04%</td><td>좋아요 8 / 저장 0</td><td><a href="https://www.instagram.com/p/DWDgpbBDy4P/" target="_blank" style="color:#f97316">보기</a></td></tr>
-        <tr><td class="center">2</td><td>2026-03-27</td><td class="right">26명</td><td class="right">11.54%</td><td>좋아요 3 / 저장 0</td><td><a href="https://www.instagram.com/p/DWXw0hbj9k8/" target="_blank" style="color:#f97316">보기</a></td></tr>
-        <tr><td class="center">3</td><td>2026-03-27</td><td class="right">25명</td><td class="right">12.0%</td><td>좋아요 3 / 저장 0</td><td><a href="https://www.instagram.com/p/DWYH7SsD7I2/" target="_blank" style="color:#f97316">보기</a></td></tr></table></div>
+        <tr><td class="center">1</td><td>2026-03-19</td><td class="right">57명</td><td class="right">14.0%</td><td>좋아요 8 / 저장 0</td><td><a href="https://www.instagram.com/p/DWDgpbBDy4P/" target="_blank" style="color:#f97316">보기</a></td></tr>
+        <tr><td class="center">2</td><td>2026-03-27</td><td class="right">26명</td><td class="right">11.5%</td><td>좋아요 3 / 저장 0</td><td><a href="https://www.instagram.com/p/DWXw0hbj9k8/" target="_blank" style="color:#f97316">보기</a></td></tr>
+        <tr><td class="center">3</td><td>2026-03-27</td><td class="right">25명</td><td class="right">12.0%</td><td>좋아요 3 / 저장 0</td><td><a href="https://www.instagram.com/p/DWYH7SsD7I2/" target="_blank" style="color:#f97316">보기</a></td></tr></table></div></div>
     <div class="section">
       <div class="section-title">
         <span class="badge badge-30sec">@30sec.budongsan</span> 계정 상세
@@ -476,16 +426,16 @@
         <tr><td>팔로워</td><td class="right"><strong>75명</strong></td></tr>
         <tr><td>주간 도달</td><td class="right"><strong>7,771명</strong></td></tr>
         <tr><td>게시물</td><td class="right">58개</td></tr>
-        <tr><td>참여율</td><td class="right">1.61%</td></tr>
-        <tr><td>평균 도달 (릴스)</td><td class="right">506명 / 최대 2704명</td></tr></table><div class="section-title" style="margin-top:20px">이번 주 상위 게시물</div><table>
+        <tr><td>참여율</td><td class="right">1.6%</td></tr>
+        <tr><td>평균 도달 (릴스)</td><td class="right">507명 / 최대 2704명</td></tr></table><div class="section-title" style="margin-top:20px">이번 주 상위 게시물</div><div style="overflow-x:auto"><table>
         <tr><th class="center">순위</th><th>게시일</th><th class="right">도달</th><th class="right">참여율</th><th>반응</th><th>링크</th></tr>
-        <tr><td class="center">1</td><td>2026-04-02</td><td class="right">2,338명</td><td class="right">0.21%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWnAaftkk3W/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
-        <tr><td class="center">2</td><td>2026-04-07</td><td class="right">828명</td><td class="right">0.72%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DW0Yrl0kSo9/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
-        <tr><td class="center">3</td><td>2026-04-07</td><td class="right">526명</td><td class="right">0.95%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DW0WQqxET_Z/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table><div class="section-title" style="margin-top:20px">전체 상위 게시물 (최근 50개)</div><table>
+        <tr><td class="center">1</td><td>2026-04-02</td><td class="right">2,338명</td><td class="right">0.2%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWnAaftkk3W/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
+        <tr><td class="center">2</td><td>2026-04-07</td><td class="right">846명</td><td class="right">0.7%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DW0Yrl0kSo9/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
+        <tr><td class="center">3</td><td>2026-04-07</td><td class="right">529명</td><td class="right">0.9%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DW0WQqxET_Z/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div><div class="section-title" style="margin-top:20px">전체 상위 게시물 (최근 50개)</div><div style="overflow-x:auto"><table>
         <tr><th class="center">순위</th><th>게시일</th><th class="right">도달</th><th class="right">참여율</th><th>반응</th><th>링크</th></tr>
-        <tr><td class="center">1</td><td>2026-03-31</td><td class="right">2,704명</td><td class="right">0.33%</td><td>좋아요 6 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWiQlhhEcZO/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
-        <tr><td class="center">2</td><td>2026-04-02</td><td class="right">2,338명</td><td class="right">0.21%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWnAaftkk3W/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
-        <tr><td class="center">3</td><td>2026-03-30</td><td class="right">2,045명</td><td class="right">0.93%</td><td>좋아요 5 / 저장 2</td><td><a href="https://www.instagram.com/reel/DWfe6C7Eq-U/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div>
+        <tr><td class="center">1</td><td>2026-03-31</td><td class="right">2,704명</td><td class="right">0.3%</td><td>좋아요 6 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWiQlhhEcZO/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
+        <tr><td class="center">2</td><td>2026-04-02</td><td class="right">2,338명</td><td class="right">0.2%</td><td>좋아요 4 / 저장 0</td><td><a href="https://www.instagram.com/reel/DWnAaftkk3W/" target="_blank" style="color:#3b82f6">보기</a></td></tr>
+        <tr><td class="center">3</td><td>2026-03-30</td><td class="right">2,046명</td><td class="right">0.9%</td><td>좋아요 5 / 저장 2</td><td><a href="https://www.instagram.com/reel/DWfe6C7Eq-U/" target="_blank" style="color:#3b82f6">보기</a></td></tr></table></div></div>
 
   <!-- DM Section -->
   <div class="section">
@@ -497,7 +447,7 @@
          margin-bottom:6px;font-size:13px">
       <strong>@hannamtatsu</strong> → @30sec
       <span style="color:#64748b;margin-left:8px">임대 상담</span>
-      <span style="color:#94a3b8;margin-left:8px;font-size:11px">(11건)</span>
+      <span style="color:#64748b;margin-left:8px;font-size:11px">(11건)</span>
     </div>
     <table class="cumulative-table">
       <tr>
@@ -514,9 +464,9 @@
       </tr>
       <tr style="background:#fffbeb">
         <td>HOT 리드</td>
-        <td class="right">0건</td>
-        <td class="right">1건</td>
-        <td class="right"><strong>1건</strong></td>
+        <td class="right">0명</td>
+        <td class="right">1명</td>
+        <td class="right"><strong>1명</strong></td>
       </tr>
       <tr>
         <td><strong>전체 누적</strong></td>
@@ -534,6 +484,6 @@
     Kai (Growth Analyst) | IG Insights API | python -m marketing_agent.main --growth
   </div>
 
-</div>
+</main>
 </body>
 </html>
